@@ -1,0 +1,62 @@
+cs160b
+├── 1
+│   ├── assignment_wk1.sh
+│   └── exercise_wk1.sh
+├── 2
+│   ├── assignment_wk2.sh
+│   └── exercise_wk2.sh
+├── 3
+│   ├── assignment_wk3.sh
+│   └── exercise_wk3.sh
+├── 4
+│   ├── assignment_wk4.sh
+│   └── exercise_wk4.sh
+├── 5
+│   ├── assignment_wk5.sh
+│   └── exercise_wk5.sh
+├── 6
+│   ├── assignment_wk6.sh
+│   └── exercise_wk6.sh
+├── 7
+│   ├── assignment_wk7.sh
+│   └── exercise_wk7.sh
+├── 8
+│   ├── assignment_wk8.sh
+│   └── exercise_wk8.sh
+├── topsecret
+│   ├── feb96
+│   ├── jan12.02
+│   ├── jan19.02
+│   ├── jan26.02
+│   ├── jan5.02
+│   ├── jan95
+│   ├── jan96
+│   ├── jan97
+│   ├── jan98
+│   ├── mar98
+│   ├── memo1
+│   ├── memo10
+│   ├── memo2
+│   └── memo2.sv
+└── wk1_create_topsecret.sh
+
+9 directories, 31 files
+
+feb96 jan12.02 jan19.02 jan26.02 jan5.02 jan95 jan96 jan97 jan98 mar98 memo1 memo10 memo2 memo2.sv
+memo2.sv
+mar98
+feb96 jan12.02 jan19.02 jan26.02 jan5.02 jan95 jan96 jan97 jan98 mar98 memo1 memo10 memo2 memo2.sv
+jan12.02 jan19.02 jan26.02 jan5.02 jan95 jan96 jan97 jan98
+feb96 jan12.02 jan19.02 jan26.02 jan5.02 jan95 jan96 jan97 jan98 mar98
+
+- Displays number of lines/files in current directory
+- removes all files whose names only consist of 3 characters
+- displays number of users logged in
+- moves everything that ends with progs/ to /users/Steve/backup
+- displays number of lines for files ending in .c in the current directory
+- removes anything ending in .o in the current directory
+- sorts the users logged in
+- prints the home directory
+- copies memo1 into current directories' parent directory
+- redirects error from plotdata into a file named errors and backgrounds the process
+ 

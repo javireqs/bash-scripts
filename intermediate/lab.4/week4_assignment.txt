@@ -1,0 +1,112 @@
+# Name: Javier Hernandez Requena
+# File: week4_assignment.txt
+# Date: November 22, 2021
+# Desc: week 4 assignments
+
+
+# caseitsayes
+
+#!/bin/bash
+# Name: Javier Hernandez Requena
+# File: caseitsayes
+# Date: November 22, 2021
+# Desc: returns an exit status of 0 if its argument is "yes," and 1 otherwise using case statement
+
+
+if [ "$#" -ne 1 ]
+then
+	echo "Incorrect number of arguments."
+	echo "Usage: itsayes argument"
+	exit 1
+fi
+
+case "$1"
+in
+	"y"	) exit 0;;
+	"Y"	) exit 0;;
+	"yes"	) exit 0;;
+	"Yes"	) exit 0;;
+	"YES"	) exit 0;;
+	*	) exit 1;;
+esac
+
+
+
+
+# casetimeod
+
+#!/bin/bash
+# Name: Javier Hernandez Requena
+# File: casetimeod
+# Date: November 22, 2021
+# Desc: displays the time of day in a.m. or p.m. notation rather than in 24-hour clock time using if statement
+
+
+day=$(date | cut -c1-3)
+month=$(date | cut -c5-7)
+digit=$(date | cut -c9-10)
+hour=$(date | cut -c12-13)
+minute=$(date | cut -c15-16)
+second=$(date | cut -c18-19)
+timezone=$(date | cut -c21-23)
+year=$(date | cut -c25-28)
+twelve=$(($hour - 12))
+
+
+case "$hour"
+in
+	0? | 1[0-2]		) echo "$day, $month $digit, $year  $hour:$minute:$second AM";;
+	1[2-9] | 2[0-4]		) echo "$day, $month $digit, $year  $twelve:$minute:$second PM";;
+	*			) exit 1;;
+esac
+
+
+
+
+# onlinetime (contains errors, and had to borrow some of your solution. still didn't work)
+
+#!/bin/bash
+# Name: Javier Hernandez Requena
+# File: onlinetime
+# Date: November 22, 2021
+# Desc: prints the number of hours and minutes that a user has been logged on to Hills
+
+
+user="$1"
+user_check=$(who | grep ""$user"")
+
+day=$(date | cut -c1-3)
+month=$(date | cut -c5-7)
+digit=$(date | cut -c9-10)
+hour=$(date | grep -o "[0-9][0-9][:][0-9][0-9]" | grep -o "^[0-9][0-9]")
+minute=$(date | grep -o "[0-9][0-9][:][0-9][0-9]" | grep -o "[0-9][0-9]$")
+totalminutes=$((( 10#${hour} * 60 ) + 10#${minute}))
+
+user_date=$(who | grep "$user" | head -1 | cut -d' ' -f10)
+user_time=$(who | grep "$user" | head -1 | cut -d' ' -f11)
+user_hour=$(who | grep "$user" | grep -o "[0-9][0-9][:][0-9][0-9]" | grep -o "^[0-9][0-9]")
+user_minute=$(who | grep "$user" | grep -o "[0-9][0-9][:][0-9][0-9]" | grep -o "[0-9][0-9]$")
+user_total=$(( ( 10#${user_hour} * 60 ) + 10#${user_minute} ))
+
+elapsed=$((10#$minute - 10#$user_minute))
+elapsed_minutes=$(( 10#$totalminutes - 10#$user_total ))
+outputhour=$(($elapsed_minutes/60))
+outputminute=$(($elapsed_minutes%60))
+
+
+if [ "$#" -ne 1 ]
+then
+	echo "Incorrect number of arguments."
+	echo "Usage: onlinetime [username]"
+	exit 1
+fi
+
+
+if [ "$user_check" ]
+then
+	echo "Date: "$user_date" Time: "$user_time""
+	echo "User: "$user""
+	echo "Time Online: "$outputhour" hour(s) and "$outputmiute" minute(s)"
+else
+	echo "That user is not logged on"
+fi

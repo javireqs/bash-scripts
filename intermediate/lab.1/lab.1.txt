@@ -1,0 +1,177 @@
+Javier Hernandez Requena
+CS 160 B
+October 31, 2021
+Lab.1.txt
+Assignment 1: Regular Expressions
+
+
+
+Part 1:
+
+1. x*					match zero or more "x" characters
+
+2. [0-9]\{3\}				match exactly 3 digits
+
+3. xx*					match one or more "x" characters
+
+4. [0-9]\{3,5\}				match from 3 to 5 digits
+
+5. x\{1,5\}				match from 1 to 5 "x" characters
+
+6. [0-9]\{1,3\},[0-9]\{3\}		match sequences from 3 to 5 digits long, then match exactly 3 digits
+
+7. x\{5,\}				match sequences of 5 or more "x" characters
+
+8. ^\…					match the beginning of a line with any 3 characters
+
+9. x\{10\}				match exactly 10 "x" characters
+
+10. [0-9]				match any single digit character 0-9
+
+11. [A-Za-z_][k-z0-5]*			match any alphabetic character (lowercase or uppercase) followed by an underscore, followed by any character k-z or 0-5, zero or more times.
+
+12. [0-9]*				match zero or more digit characters between 0 and 9
+
+13. ^Begin$				match any line that starts with and ends with "Begin"
+
+14. [0-9][0-9][0-9]			match 3 single digits that range from 0-9
+
+15. ^..*\1$				match any line that starts with one or more characters and end with a 1
+
+
+Part 2:
+
+1. 
+command: wc -l /etc/passwd
+   
+output: 9429 /etc/passwd
+
+
+2. 
+command: who | cut -c1-8
+
+Output: 
+
+esolori1
+dbreiten
+lbrown9 
+gburke5 
+nramos24
+crodr171
+vnunez3 
+lbrown9 
+wprapasa
+yhe113  
+jhern441
+rlozano 
+dgudino1
+sboonchi
+dmo6    
+bthomp43
+wcheng5 
+lbrown9 
+cpenksa 
+
+
+3.
+Command: cat /etc/passwd | cut -d: -f3 | grep '^[0-9][0-9]$'
+
+Output:
+
+11
+12
+48
+14
+99
+66
+81
+32
+59
+89
+97
+74
+38
+72
+52
+
+
+4.
+Command: cat /etc/passwd | cut -d: -f3 | grep '^[0-9]..[0-9]$'
+
+Output:
+ 
+Very long, did not want to include it, but I can if you need it.
+
+
+5.
+Command: ls -lSr /pub/cis/dputnam/inaugural_speeches/
+
+Output:
+total 888
+-rw-r--r-- 1 dputnam csdept   835 Sep 15  2015 george_washington_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  3062 Sep 15  2015 franklin_d._roosevelt_fourth_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  3970 Sep 15  2015 abraham_lincoln_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  5609 Sep 15  2015 theodore_roosevelt_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  6539 Sep 15  2015 ulysses_s._grant_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  6639 Sep 15  2015 zachary_taylor_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  6856 Sep 15  2015 andrew_jackson_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  6907 Sep 15  2015 jimmy_carter_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  7037 Sep 15  2015 james_madison_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  7100 Sep 15  2015 andrew_jackson_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  7199 Sep 15  2015 james_madison_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  7581 Sep 15  2015 franklin_d._roosevelt_third_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  7601 Sep 15  2015 john_f._kennedy_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  7773 Sep 15  2015 ulysses_s._grant_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  8223 Sep 15  2015 lyndon_baines_johnson_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  8431 Sep 15  2015 woodrow_wilson_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  8665 Sep 15  2015 ﻿george_washington_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  9107 Sep 15  2015 george_w._bush_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  9193 Sep 15  2015 dwight_d._eisenhower_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  9253 Sep 15  2015 william_jefferson_clinton_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept  9606 Sep 15  2015 woodrow_wilson_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 10008 Sep 15  2015 richard_milhous_nixon_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 10169 Sep 15  2015 thomas_jefferson_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 10185 Sep 15  2015 grover_cleveland_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 10641 Sep 15  2015 franklin_d._roosevelt_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 10939 Sep 15  2015 franklin_d._roosevelt_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 11636 Sep 15  2015 richard_milhous_nixon_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 11989 Sep 15  2015 george_w._bush_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 12298 Sep 15  2015 william_jefferson_clinton_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 12347 Sep 15  2015 barack_obama_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 12395 Sep 15  2015 grover_cleveland_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 12537 Sep 15  2015 george_bush_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 12950 Sep 15  2015 thomas_jefferson_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 13409 Sep 15  2015 barack_obama_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 13475 Sep 15  2015 william_mckinley_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 13700 Sep 15  2015 harry_s._truman_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 13771 Sep 15  2015 ronald_reagan_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 13906 Sep 15  2015 john_adams_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 13977 Sep 15  2015 dwight_d._eisenhower_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 14587 Sep 15  2015 ronald_reagan_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 14966 Sep 15  2015 rutherford_b._hayes_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 16848 Sep 15  2015 james_buchanan_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 17772 Sep 15  2015 john_quincy_adams_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 17804 Sep 15  2015 james_a._garfield_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 19923 Sep 15  2015 james_monroe_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 20109 Sep 15  2015 franklin_pierce_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 20331 Sep 15  2015 warren_g._harding_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 21049 Sep 15  2015 abraham_lincoln_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 22990 Sep 15  2015 herbert_hoover_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 23444 Sep 15  2015 martin_van_buren_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 23697 Sep 15  2015 william_mckinley_first_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 23985 Sep 15  2015 calvin_coolidge_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 26218 Sep 15  2015 benjamin_harrison_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 26370 Sep 15  2015 james_monroe_second_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 28744 Sep 15  2015 james_knox_polk_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 32205 Sep 15  2015 william_howard_taft_inaugural_address.txt
+-rw-r--r-- 1 dputnam csdept 49745 Sep 15  2015 william_henry_harrison_inaugural_address.txt
+
+
+6.
+Command:cat /etc/passwd | cut -d: -f7 | grep 'bash$' | wc -l
+
+Output:
+
+6469
+
+

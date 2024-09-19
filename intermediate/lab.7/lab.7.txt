@@ -1,0 +1,26 @@
+# join_with output:
+
+1:2:3:4:5
+
+
+# cube output
+
+1 cubed: 1
+2 cubed: 8
+3 cubed: 27
+4 cubed: 64
+
+
+# chg_case output
+
+HELLO
+HELLO HOW ARE U
+hello how are you
+hello how are you
+
+
+#go2 output
+
+[jhern441@hills.ccsf.edu ~/cs160b/7]$ go2 python 3
+
+[jhern441@hills.ccsf.edu ~/cs160b/7/public_html/python/3]$

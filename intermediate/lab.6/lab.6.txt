@@ -1,0 +1,12 @@
+./to_hex_color 
+
+Enter three color values between 0 and 255: 255 0 0 
+RGB 255, 0, 0 is: #ff0000
+Enter three color values between 0 and 255: 0 255 0
+RGB 0, 255, 0 is: #00ff00
+Enter three color values between 0 and 255: 0 0 255
+RGB 0, 0, 255 is: #0000ff
+Enter three color values between 0 and 255: quit
+Finished!
+
+

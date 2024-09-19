@@ -1,0 +1,24 @@
+.
+├── AMG.reply
+├── final_tree.txt
+├── no.JSK
+├── pat
+├── ruth
+└── steve
+    ├── documents
+    │   ├── letters
+    │   ├── memos
+    │   │   ├── dact
+    │   │   └── plan
+    │   └── proposals
+    │       ├── letters
+    │       │   ├── AMG.reply
+    │       │   └── no.JSK
+    │       ├── new.hire
+    │       └── sys.A
+    └── programs
+        ├── collect
+        ├── mon
+        └── wb
+
+20 directories, 1 file

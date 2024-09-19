@@ -1,0 +1,109 @@
+1. match zero or more 'x'
+2. Match exactly 3 digits
+3. Match 1 or more 'x'
+4. Match a min of 3 and a max of 5 digits
+5. Match consecutive 'x' with a min of 1 and a max of 5
+6. Match digits with a min of 1 and max of 3 and then match exactly 3 digits
+7. Match x at least 5 times
+8. Match the first 3 characters of a line
+9. Match exactly 10 x's
+10. Match any number
+11. Match 0 or more instances that start with a capital or lowercase letter k-z or underscore or 0-5
+12. Match 0 or more digits in 0-9
+13. Match the start or end of a line with Begin
+14. Match 3 digits
+15. Match lines beginning with ..* and ending with 11. ls -l | wc -l /etc/passwd
+10138 /etc/passwd
+
+
+
+2. who | cut -c1-8
+bneill2 
+klagahid
+jhern441
+qyu57   
+jhern441
+rrowleyi
+rdecast3
+pbrenne2
+rtwist  
+kserrafi
+tlee205 
+pbrenne2
+eflore45
+rseth   
+rseth   
+iyoo1   
+ryauwant
+mclayto5
+rlozano 
+eflore45
+hghaderi
+mclayto5
+
+
+
+
+
+5. ls -Ss /pub/cis/dputnam/inaugural_speeches/
+total 888
+52 william_henry_harrison_inaugural_address.txt
+32 william_howard_taft_inaugural_address.txt
+32 james_knox_polk_inaugural_address.txt
+28 james_monroe_second_inaugural_address.txt
+28 benjamin_harrison_inaugural_address.txt
+24 calvin_coolidge_inaugural_address.txt
+24 william_mckinley_first_inaugural_address.txt
+24 martin_van_buren_inaugural_address.txt
+24 herbert_hoover_inaugural_address.txt
+24 abraham_lincoln_first_inaugural_address.txt
+20 warren_g._harding_inaugural_address.txt
+20 franklin_pierce_inaugural_address.txt
+20 james_monroe_first_inaugural_address.txt
+20 james_a._garfield_inaugural_address.txt
+20 john_quincy_adams_inaugural_address.txt
+20 james_buchanan_inaugural_address.txt
+16 rutherford_b._hayes_inaugural_address.txt
+16 ronald_reagan_second_inaugural_address.txt
+16 dwight_d._eisenhower_first_inaugural_address.txt
+16 john_adams_inaugural_address.txt
+16 ronald_reagan_first_inaugural_address.txt
+16 harry_s._truman_inaugural_address.txt
+16 william_mckinley_second_inaugural_address.txt
+16 barack_obama_first_inaugural_address.txt
+16 thomas_jefferson_second_inaugural_address.txt
+16 george_bush_inaugural_address.txt
+16 grover_cleveland_second_inaugural_address.txt
+16 barack_obama_second_inaugural_address.txt
+16 william_jefferson_clinton_second_inaugural_address.txt
+12 george_w._bush_second_inaugural_address.txt
+12 richard_milhous_nixon_first_inaugural_address.txt
+12 franklin_d._roosevelt_first_inaugural_address.txt
+12 franklin_d._roosevelt_second_inaugural_address.txt
+12 grover_cleveland_first_inaugural_address.txt
+12 thomas_jefferson_first_inaugural_address.txt
+12 richard_milhous_nixon_second_inaugural_address.txt
+12 woodrow_wilson_first_inaugural_address.txt
+12 william_jefferson_clinton_first_inaugural_address.txt
+12 dwight_d._eisenhower_second_inaugural_address.txt
+12 george_w._bush_first_inaugural_address.txt
+12 ﻿george_washington_first_inaugural_address.txt
+12 woodrow_wilson_second_inaugural_address.txt
+12 lyndon_baines_johnson_inaugural_address.txt
+ 8 ulysses_s._grant_second_inaugural_address.txt
+ 8 john_f._kennedy_inaugural_address.txt
+ 8 franklin_d._roosevelt_third_inaugural_address.txt
+ 8 james_madison_second_inaugural_address.txt
+ 8 andrew_jackson_second_inaugural_address.txt
+ 8 james_madison_first_inaugural_address.txt
+ 8 jimmy_carter_inaugural_address.txt
+ 8 andrew_jackson_first_inaugural_address.txt
+ 8 zachary_taylor_inaugural_address.txt
+ 8 ulysses_s._grant_first_inaugural_address.txt
+ 8 theodore_roosevelt_inaugural_address.txt
+ 4 abraham_lincoln_second_inaugural_address.txt
+ 4 franklin_d._roosevelt_fourth_inaugural_address.txt
+ 4 george_washington_second_inaugural_address.txt
+
+6. cat /etc/passwd | cut -d: -f7 | grep 'bash' | wc -l
+7031

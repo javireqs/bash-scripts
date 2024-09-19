@@ -1,0 +1,1 @@
+"XxXxXx", "HOMEDIR", "_date", "file_name", "file1", are all valid variable names.

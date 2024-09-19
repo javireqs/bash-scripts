@@ -1,0 +1,2 @@
+This is a double quoted string that includes "double quotes" inside of the double quotes.
+This is a single quoted string that includes multiple "double quotes" and multiple 'single quotes' inside of the single quotes.

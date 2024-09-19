@@ -1,0 +1,11 @@
+Valid: 
+yes
+no
+Timeod: 
+Tue, Nov 30, 2021  11:21:24 PM
+Mysed: 
+281 oliver.txt
+271 oliver.txt
+Itsayes: 
+0
+1

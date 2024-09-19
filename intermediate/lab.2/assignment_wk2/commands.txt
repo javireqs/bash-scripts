@@ -1,0 +1,25 @@
+# Name: Javier Hernandez Requena
+# File: Commands.txt
+# Desc: Week 2 Assignment commands
+
+
+
+3) cat /users/dputnam/public_html/phonebook.txt | cut -d' ' -f1
+
+
+4)
+  1) tr -d ' '
+     echo $text | ./tr_strip > tr_phonebook.txt
+
+  2) sed 's/ //g'
+     echo $text | ./sed_strip > sed_phonebook.txt
+
+
+5)
+  1) echo $text | wc -c
+  2) echo -n $text | sed 's/[^a-zA-Z]//g' | wc -c
+
+
+6) namelist=$(sort /users/dputnam/public_html/phonebook.txt | uniq)
+   echo $namelist
+
